@@ -16,6 +16,28 @@ Dockerfiles for building Centos based elasticsearch images.
 * **`5.5.2` 		([5.5.2/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/5.5.2/Dockerfile))**
 * **`5.1.2` 		([5.1.2/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/5.1.2/Dockerfile))**
 
+## Elasticsearch containers as a cluster without 
+
+Since Elasticsearch runs inside a contianer we have to make following changes
+
+1. Docker networking hides the containers from the networking stack on the host machine. The problem is when you start elasticsearch, you have to host addresses. 
+   Either we have to publish all ports or update elasticsearch.yml with below settings, and define PUBLISH_IP as an environment variable.
+   ```
+   network.bind_host: 0.0.0.0
+	 network.publish_host: "${PUBLISH_IP}"
+   ``` 
+1. Create/update sysctl configurations and Docker startup options to fix max_file_descriptions error during elasticsearch start up.
+	/etc/sysconfig/docker with below values
+	```
+	DAEMON_MAXFILES=1048576
+	OPTIONS="--default-ulimit nofile=1024:65536"
+	DAEMON_PIDFILE_TIMEOUT=10
+	```
+1. Create/update sysctl.d limits on host machine and update sysctl to reflect immediately
+	```
+	vm.max_map_count=262144
+	fs.file-max=100000
+	```
 ## Pre-Requisites
 
 - install docker-engine [https://docs.docker.com/engine/installation/](https://docs.docker.com/engine/installation/)

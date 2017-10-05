@@ -8,7 +8,7 @@ RUN useradd -u 403 elasticsearch && \
 	tar -xzf /tmp/elasticsearch.tar.gz -C /opt && \
 	chown -R elasticsearch:elasticsearch /opt/elasticsearch-${ELASTIC_VERSION} && \
 	ln -sf /opt/elasticsearch-${ELASTIC_VERSION} /opt/elasticsearch
-RUN /opt/elasticsearch/bin/elasticsearch-plugin install analysis-icu
+RUN /usr/local/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 USER elasticsearch
 ENV JAVA_HOME=/usr/local/jre \
 	ES_HOME=${ES_HOME}
