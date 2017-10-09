@@ -12,4 +12,4 @@ RUN /usr/local/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 USER elasticsearch
 ENV JAVA_HOME=/usr/local/jre \
 	ES_HOME=${ES_HOME}
-ENTRYPOINT ["/opt/elasticsearch/bin/elasticsearch"]
+ENTRYPOINT ["/usr/local/elasticsearch/bin/elasticsearch"]
