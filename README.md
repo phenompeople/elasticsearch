@@ -43,6 +43,11 @@ Since Elasticsearch runs inside a contianer we have to make following changes
 	vm.max_map_count=262144
 	fs.file-max=100000
 	```
+1. Please define below variables during run time to replace default values, variables defined during run time will take the highest priority, each variable should be passed differently with option -e 
+
+|Attribute name                     | Default Value             |
+|-----------------------------------|---------------------------|
+|ES_JAVA_OPTS                       | -Xms2g -Xmx2g             |
 
 ## Pre-Requisites
 
