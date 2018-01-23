@@ -1,4 +1,4 @@
-FROM phenompeople/centos-sunjre:APPLY
+FROM phenompeople/centos-sunjre:latest
 LABEL maintainer="rajesh.jonnalagadda@phenompeople.com"
 EXPOSE 9200 9300
 ARG ELASTIC_VERSION=6.1.2
