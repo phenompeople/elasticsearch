@@ -3,7 +3,7 @@ MAINTAINER Rajesh Jonnalagadda "admin.squad@phenompeople.com"
 EXPOSE 9200 9300
 ARG ELASTIC_VERSION=5.5.2
 ARG ES_HOME=/usr/local/elasticsearch
-RUN useradd -u 402 elasticsearch && \
+RUN useradd -u 403 elasticsearch && \
 	wget -q -O /tmp/elasticsearch.tar.gz https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${ELASTIC_VERSION}.tar.gz && \
 	tar -xzf /tmp/elasticsearch.tar.gz -C /usr/local && \
 	chown -R elasticsearch:elasticsearch /usr/local/elasticsearch-${ELASTIC_VERSION} && \
