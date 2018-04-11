@@ -1,9 +1,10 @@
-FROM phenompeople/centos-sunjre
-MAINTAINER Rajesh Jonnalagadda "admin.squad@phenompeople.com"
+FROM phenompeople/centos-sunjre:latest
+LABEL maintainer="rajesh.jonnalagadda@phenompeople.com"
 EXPOSE 9200 9300
-ARG ELASTIC_VERSION=5.6.2
+ARG ELASTIC_VERSION=6.2.3
 ARG ES_HOME=/usr/local/elasticsearch
-RUN useradd -u 403 elasticsearch && \
+RUN groupadd -g 403 elasticsearch && \
+	useradd -u 403 -g 403 elasticsearch && \
 	wget -q -O /tmp/elasticsearch.tar.gz https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${ELASTIC_VERSION}.tar.gz && \
 	tar -xzf /tmp/elasticsearch.tar.gz -C /usr/local && \
 	chown -R elasticsearch:elasticsearch /usr/local/elasticsearch-${ELASTIC_VERSION} && \
@@ -14,3 +15,4 @@ USER elasticsearch
 ENV JAVA_HOME=/usr/local/jre \
 	ES_HOME=${ES_HOME}
 ENTRYPOINT ["/usr/local/elasticsearch/bin/elasticsearch"]
+
