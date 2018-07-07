@@ -1,7 +1,7 @@
 FROM phenompeople/centos-sunjre:latest
 LABEL maintainer="rajesh.jonnalagadda@phenompeople.com"
 EXPOSE 9200 9300
-ARG ELASTIC_VERSION=6.1.2
+ARG ELASTIC_VERSION=6.3.0
 ARG ES_HOME=/usr/local/elasticsearch
 RUN groupadd -g 403 elasticsearch && \
 	useradd -u 403 -g 403 elasticsearch && \
