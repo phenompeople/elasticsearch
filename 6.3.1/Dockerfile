@@ -11,7 +11,7 @@ RUN groupadd -g 403 elasticsearch && \
 	sed -e '/-Xmx2g/d' -e  '/-Xms2g/d' -i /usr/local/elasticsearch-${ELASTIC_VERSION}/config/jvm.options && \
 	ln -sf /usr/local/elasticsearch-${ELASTIC_VERSION} ${ES_HOME}
 RUN /usr/local/elasticsearch/bin/elasticsearch-plugin install analysis-icu
-RUN /usr/local/elasticsearch/bin/elasticsearch-plugin install phonetic
+RUN /usr/local/elasticsearch/bin/elasticsearch-plugin install analysis-phonetic
 USER elasticsearch
 ENV JAVA_HOME=/usr/local/jre \
 	ES_HOME=${ES_HOME}
