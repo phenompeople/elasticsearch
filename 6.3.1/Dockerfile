@@ -1,7 +1,7 @@
 FROM phenompeople/centos-sunjre:latest
 LABEL maintainer="rajesh.jonnalagadda@phenompeople.com"
 EXPOSE 9200 9300
-ARG ELASTIC_VERSION=6.3.0
+ARG ELASTIC_VERSION=6.3.1
 ARG ES_HOME=/usr/local/elasticsearch
 RUN groupadd -g 403 elasticsearch && \
 	useradd -u 403 -g 403 elasticsearch && \
@@ -11,6 +11,7 @@ RUN groupadd -g 403 elasticsearch && \
 	sed -e '/-Xmx2g/d' -e  '/-Xms2g/d' -i /usr/local/elasticsearch-${ELASTIC_VERSION}/config/jvm.options && \
 	ln -sf /usr/local/elasticsearch-${ELASTIC_VERSION} ${ES_HOME}
 RUN /usr/local/elasticsearch/bin/elasticsearch-plugin install analysis-icu
+RUN /usr/local/elasticsearch/bin/elasticsearch-plugin install phonetic
 USER elasticsearch
 ENV JAVA_HOME=/usr/local/jre \
 	ES_HOME=${ES_HOME}

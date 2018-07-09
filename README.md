@@ -11,8 +11,8 @@ Dockerfiles for building Centos based elasticsearch images.
 
 ## phenompeople/elasticsearch
 
-* **`latest`		([6.3.0/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/6.3.0/Dockerfile))**
-* **`6.3.0` 		([6.1.2/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/6.3.0/Dockerfile))**
+* **`latest`		([6.3.1/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/6.3.1/Dockerfile))**
+* **`6.3.1` 		([6.3.1/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/6.3.1/Dockerfile))**
 * **`6.2.3` 		([6.2.3/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/6.2.3/Dockerfile))**
 * **`5.6.9` 		([5.6.9/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/5.6.9/Dockerfile))**
 * **`5.5.2` 		([5.5.2/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/5.5.2/Dockerfile))**
