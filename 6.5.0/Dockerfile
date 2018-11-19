@@ -1,4 +1,4 @@
-FROM phenompeople/oraclejdk:latest
+FROM phenompeople/oraclejre:latest
 LABEL maintainer="rajesh.jonnalagadda@phenompeople.com"
 EXPOSE 9200 9300
 ARG ELASTIC_VERSION=6.5.0
@@ -10,8 +10,9 @@ RUN yum install which -q -y && \
 	tar -xzf /tmp/elasticsearch.tar.gz -C /usr/local && \
 	chown -R elasticsearch:elasticsearch /usr/local/elasticsearch-${ELASTIC_VERSION} && \
 	sed -e '/-Xmx2g/d' -e  '/-Xms2g/d' -i /usr/local/elasticsearch-${ELASTIC_VERSION}/config/jvm.options && \
-	ln -sf /usr/local/elasticsearch-${ELASTIC_VERSION} ${ES_HOME}
-ENV JAVA_HOME=/usr/local/jdk
+	ln -sf /usr/local/elasticsearch-${ELASTIC_VERSION} ${ES_HOME} && \
+	rm -rf /tmp/elasticsearch.tar.gz
+ENV JAVA_HOME=/usr/local/jre
 RUN /usr/local/elasticsearch/bin/elasticsearch-plugin install analysis-icu
 RUN /usr/local/elasticsearch/bin/elasticsearch-plugin install analysis-phonetic
 USER elasticsearch
