@@ -1,6 +1,4 @@
-[![Docker Automated build](https://img.shields.io/docker/automated/phenompeople/elasticsearch.svg?style=plastic)](https://hub.docker.com/r/phenompeople/elasticsearch/)
-[![Docker Build Status](https://img.shields.io/docker/build/phenompeople/elasticsearch.svg?style=plastic)](https://hub.docker.com/r/phenompeople/elasticsearch/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/phenompeople/elasticsearch.svg?style=plastic)](https://hub.docker.com/r/phenompeople/elasticsearch/)
+[![dockeri.co](http://dockeri.co/image/phenompeople/elasticsearch)](https://registry.hub.docker.com/phenompeople/elasticsearch/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 # elasticsearch 
@@ -11,12 +9,10 @@ Dockerfiles for building Centos based elasticsearch images.
 
 ## phenompeople/elasticsearch
 
-* **`latest`		([6.5.0/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/6.5.0/Dockerfile))**
-* **`6.5.0` 		([6.5.0/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/6.5.0/Dockerfile))**
-* **`6.3.0` 		([6.3.0/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/6.3.0/Dockerfile))**
-* **`5.6.9` 		([5.6.9/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/5.6.9/Dockerfile))**
-* **`5.5.2` 		([5.5.2/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/5.5.2/Dockerfile))**
-* **`5.1.2` 		([5.1.2/Dockerfile](https://bitbucket.org/phenompeople/elasticsearch/src/master/5.1.2/Dockerfile))**
+* **`latest`		([7.2.0/Dockerfile](https://github.com/phenompeople/elasticsearch/blob/master/7.2.0/Dockerfile))**
+* **`7.2.0` 		([7.2.0/Dockerfile](https://github.com/phenompeople/elasticsearch/blob/master/6.5.0/Dockerfile))**
+* **`6.5.0` 		([6.5.0/Dockerfile](https://github.com/phenompeople/elasticsearch/blob/master/6.5.0/Dockerfile))**
+* **`5.6.9` 		([5.6.9/Dockerfile](https://github.com/phenompeople/elasticsearch/blob/master/5.6.9/Dockerfile))**
 
 ### Elasticsearch containers as a cluster without docker-compose 
 
