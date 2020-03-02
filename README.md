@@ -9,8 +9,9 @@ Dockerfiles for building Centos based elasticsearch images.
 
 ## phenompeople/elasticsearch
 
-* **`latest`		([7.2.0/Dockerfile](https://github.com/phenompeople/elasticsearch/blob/master/7.2.0/Dockerfile))**
-* **`7.2.0` 		([7.2.0/Dockerfile](https://github.com/phenompeople/elasticsearch/blob/master/6.5.0/Dockerfile))**
+* **`latest`		([7.6.0/Dockerfile](https://github.com/phenompeople/elasticsearch/blob/master/7.6.0/Dockerfile))**
+* **`7.6.0` 		([7.6.0/Dockerfile](https://github.com/phenompeople/elasticsearch/blob/master/7.6.0/Dockerfile))**
+* **`7.2.0` 		([7.2.0/Dockerfile](https://github.com/phenompeople/elasticsearch/blob/master/7.2.0/Dockerfile))**
 * **`6.5.0` 		([6.5.0/Dockerfile](https://github.com/phenompeople/elasticsearch/blob/master/6.5.0/Dockerfile))**
 * **`5.6.9` 		([5.6.9/Dockerfile](https://github.com/phenompeople/elasticsearch/blob/master/5.6.9/Dockerfile))**
 
@@ -70,6 +71,7 @@ Above command runs elasticsearch container with port 9200 mapped to host and rea
 ## Maintainers
 
 * Rajesh Jonnalagadda (<rajesh.jonnalagadda@phenompeople.com>)
+* Harshavardhan Baddam (<harshavardhan.baddam@phenompeople.com>)
 
 ## License and Authors
 
